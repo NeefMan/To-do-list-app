@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(122, 184, 122);
+}
+
+.container {
+    background: rgb(122, 184, 122);
+    border: 0.5px solid #2b3b2b;
+    padding: 20px 30px;
+    border-radius: 6%;
+    box-shadow: -5px 5px 10px #2b3b2b,
+    5px -5px 10px #608560;
+}
+
+#login-header {
+    position: relative;
+    font-size: 40px;
+    font-weight: 800;
+    color: #bdeb34;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#login-header::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #bdeb34;
+    bottom: -20px;
+    left: 0;
+}
+
+i {
+    margin: 10px;
+}
+
+form {
+    margin: 10px 0;
+}
+
+label {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    margin-left: 5px;
+}
+
+input[type='text'],
+input[type='password'] {
+    margin-bottom: 10px;
+    width: 350px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    color: white;
+    background: rgb(122, 184, 122);
+    border: 0.5px solid #2b3b2b;
+    box-shadow: -2px 2px 3px #2b3b2b,
+    2px -2px 3px #608560;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+    color: #bdeb34;
+    box-shadow: inset -2px 2px 3px #2b3b2b,
+    inset 2px -2px 3px #608560;
+}
+
+.forgot-pw {
+    display: block;
+    margin-top: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.forgot-pw:hover {
+    color: #bdeb34;
+    text-decoration: underline;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: #bdeb34;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#submit-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fa-right-to-bracket {
+    position: relative;
+    right: 40px;
+    top: 1px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.signup {
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.signup a {
+    text-decoration: none;
+    color: white;
+}
+
+.signup a:hover {
+    color: #bdeb34;
+    text-decoration: underline;
+}
+
+.error {
+    margin-bottom: 20px;
+    color: #bdeb34;
+    font-weight: 500;
+}

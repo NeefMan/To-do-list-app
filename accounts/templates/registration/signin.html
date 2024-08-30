@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/css/loginstyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="login-header">Log in</h2><br><br>
+        <form action="{% url 'accounts:signin' %}" method="post">
+            {% csrf_token %}
+
+            <label for="user"><i class="fa fa-user"></i>Username</label><br>
+            <input autocomplete="off" type="text" id="user" name="username" required><br>
+
+            <label for="pw"><i class="fa-solid fa-lock"></i>Password</label><br>
+            <input autocomplete="off" type="password" id="pw" name="password" required><br>
+
+            <a href="" class="forgot-pw">Forgot Password?</a><br>
+
+            {% if usernameError %}
+            <div class="error">
+                <p>The username and/or password submitted is not correct</p>
+            </div>
+            {% elif passwordError %}
+            <div class="error">
+                <p>The password is wrong</p>
+            </div>
+            {% endif %}
+
+            <button>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <input type="submit" value="Login" id="submit-btn">
+            </button>
+            <div class="signup">
+                Not a member? <a href="{% url 'accounts:register' %}">Signup here</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
